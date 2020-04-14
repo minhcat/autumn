@@ -9,7 +9,12 @@ class Tag extends Model
 {
     use Translatable;
 
+    public $translatedAttributes = ['name', 'slug'];
+    protected $fillable = ['name', 'slug'];
     protected $table = 'blog__tags';
-    public $translatedAttributes = [];
-    protected $fillable = [];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

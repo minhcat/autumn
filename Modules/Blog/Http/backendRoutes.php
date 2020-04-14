@@ -72,4 +72,10 @@ $router->group(['prefix' => '/blog'], function (Router $router) {
         'uses' => 'CategoryController@destroy',
         'middleware' => 'can:blog.categories.destroy',
     ]);
+
+    $router->get('tags', [
+        'as' => 'admin.blog.tag.index',
+        'uses' => 'TagController@index',
+        'middleware' => 'can:blog.categories.index',
+    ]);
 });

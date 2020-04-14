@@ -38,6 +38,15 @@ class RegisterBlogSidebar extends AbstractAdminSidebar
                         $this->auth->hasAccess('blog.categories.index')
                     );
                 });
+                $item->item(trans('blog::tag.title.tag'), function (Item $item) {
+                    $item->icon('fa fa-tag');
+                    $item->weight(2);
+                    $item->route('admin.blog.tag.index');
+                    $item->append('admin.blog.category.create');
+                    $item->authorize(
+                        $this->auth->hasAccess('blog.categories.index')
+                    );
+                });
                 $item->authorize(
                     $this->auth->hasAccess('blog.tags.index') || $this->auth->hasAccess('blog.posts.index') || $this->auth->hasAccess('blog.categories.index')
                 );

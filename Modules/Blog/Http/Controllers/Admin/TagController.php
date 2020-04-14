@@ -31,7 +31,7 @@ class TagController extends AdminBaseController
      */
     public function index()
     {
-        //$tags = $this->tag->all();
+        $tags = $this->tag->all();
 
         return view('blog::admin.tags.index', compact(''));
     }
