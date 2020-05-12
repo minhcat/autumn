@@ -1,0 +1,18 @@
+{
+    "name": "Fall",
+    "alias": "fall",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+	"active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Fall\\Providers\\FallServiceProvider",
+        "Modules\\Fall\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}
